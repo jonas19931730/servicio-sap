@@ -1,0 +1,42 @@
+package com.nirsa.nw.web.app.enlacemiddleware.models.dto;
+
+import java.io.Serializable;
+
+public class ResponseSap implements Serializable {
+
+	private Integer idsap;
+	private String descripcion;
+
+	public ResponseSap() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ResponseSap(Integer idsap, String descripcion) {
+		super();
+		this.idsap = idsap;
+		this.descripcion = descripcion;
+	}
+
+	public Integer getIdsap() {
+		return idsap;
+	}
+
+	public void setIdsap(Integer idsap) {
+		this.idsap = idsap;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+}

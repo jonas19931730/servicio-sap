@@ -1,0 +1,15 @@
+package com.nirsa.nw.web.app.servicioatunera.calidad.controllers;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CalidadCatalogoEsterilizadoNovedadController {
+	
+	@GetMapping("/api/prueba")
+	public ResponseEntity<?> prueba(){
+		return new ResponseEntity<String>("Hola mundo",HttpStatus.OK);
+	}
+}

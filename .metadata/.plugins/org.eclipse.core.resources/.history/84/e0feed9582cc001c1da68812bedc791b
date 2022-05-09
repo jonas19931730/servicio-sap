@@ -1,0 +1,9 @@
+package com.nirsa.nw.web.app.enlacemiddleware.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class SapController {
+	
+	
+}

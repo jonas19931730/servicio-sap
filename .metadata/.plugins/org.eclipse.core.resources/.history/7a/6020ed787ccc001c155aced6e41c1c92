@@ -1,0 +1,5 @@
+package com.nirsa.nw.web.app.enlacemiddleware.models.dto;
+
+public class ResponseSap {
+
+}

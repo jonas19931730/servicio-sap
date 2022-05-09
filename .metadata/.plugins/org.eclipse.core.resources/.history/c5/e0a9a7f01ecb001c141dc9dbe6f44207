@@ -1,0 +1,40 @@
+package com.nirsa.nw.web.app.servicioatunera.calidad.model.services.Impl;
+
+import java.util.List;
+
+import com.nirsa.nw.web.app.servicioatunera.calidad.model.entity.CalidadCatalogoEsterilizadoNovedad;
+import com.nirsa.nw.web.app.servicioatunera.calidad.model.services.ICalidadCatalogoEsterilizadoNovedadService;
+
+public class CalidadCatalogoEsterelizadoNovedadServiceImpl implements ICalidadCatalogoEsterilizadoNovedadService  {
+
+	@Override
+	public List<CalidadCatalogoEsterilizadoNovedad> listar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CalidadCatalogoEsterilizadoNovedad findById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CalidadCatalogoEsterilizadoNovedad guardar(CalidadCatalogoEsterilizadoNovedad payload) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CalidadCatalogoEsterilizadoNovedad actualizar(Integer id, CalidadCatalogoEsterilizadoNovedad payload) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void eliminar(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

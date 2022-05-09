@@ -1,0 +1,47 @@
+package com.nirsa.nw.web.app.servicioatunera.model.entity;
+
+import java.io.Serializable;
+
+
+public class EncartonadoCajaLata implements Serializable {
+
+	private Integer idencartonadocajalata;
+	private String descripcion;
+	private Integer valor;
+
+	public EncartonadoCajaLata() {
+	}
+
+	public EncartonadoCajaLata(Integer idencartonadocajalata, String descripcion, Integer valor) {
+		super();
+		this.idencartonadocajalata = idencartonadocajalata;
+		this.descripcion = descripcion;
+		this.valor = valor;
+	}
+
+	public Integer getIdencartonadocajalata() {
+		return idencartonadocajalata;
+	}
+
+	public void setIdencartonadocajalata(Integer idencartonadocajalata) {
+		this.idencartonadocajalata = idencartonadocajalata;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Integer getValor() {
+		return valor;
+	}
+
+	public void setValor(Integer valor) {
+		this.valor = valor;
+	}
+
+	private static final long serialVersionUID = 1L;
+}

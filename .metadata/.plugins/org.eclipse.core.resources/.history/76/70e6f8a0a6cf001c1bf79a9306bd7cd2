@@ -1,0 +1,52 @@
+package com.nirsa.nw.web.app.enlacemiddleware.services;
+
+import java.util.List;
+import java.util.Random;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.nirsa.nw.web.app.enlacemiddleware.models.dto.Prueba;
+import com.nirsa.nw.web.app.enlacemiddleware.models.dto.RequestSap;
+import com.nirsa.nw.web.app.enlacemiddleware.models.dto.ResponseSap;
+import com.nirsa.nw.web.app.enlacemiddleware.utils.ValoresConstantes;
+
+@Service
+public class SapServiceImpl implements ISapService {
+	
+	@Autowired
+	private RestTemplate clienteRest;
+
+	@Override
+	public void enviarProceso(RequestSap request) {
+			
+	}
+
+	@Override
+	public void enviarListaProcesos(List<RequestSap> listado) {
+		
+		
+	}
+	@Override
+	public List<ResponseSap> recibirProcesados() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	// para prueba
+	@Override
+	public ResponseSap enviarProcesop(RequestSap request) {
+		ResponseSap response = new ResponseSap();
+		Random random = new Random();
+		
+		Object respuesta = clienteRest.getForObject(ValoresConstantes.urlEnlace,Object.class);
+		
+		Integer idsapGenerado = random.nextInt(100)*2;
+		response.setIdsap(idsapGenerado);
+		response.setDescripcion("encartonado");
+		response.setData(respuesta);
+		return response;
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.nirsa.nw.web.app.auth.models.entity;
+
+public class LoginSolicitud {
+	private String idsuario;
+
+	private String clave;
+	
+	
+
+	public String getIdsuario() {
+		return idsuario;
+	}
+
+	public void setIdsuario(String idsuario) {
+		this.idsuario = idsuario;
+	}
+
+	public String getClave() {
+		return clave;
+	}
+
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
+
+}

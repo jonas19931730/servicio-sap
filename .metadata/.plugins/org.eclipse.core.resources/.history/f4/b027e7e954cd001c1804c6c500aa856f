@@ -1,0 +1,29 @@
+package com.nirsa.nw.web.app.auth.security.services;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.nirsa.nw.web.app.auth.models.dao.IUsuarioDao;
+import com.nirsa.nw.web.app.auth.models.entity.User;
+
+@Service
+public class UtilServiceImpl implements UtilService{
+	
+	@Autowired
+	IUsuarioDao userDao;
+	
+	@Autowired
+	PasswordEncoder encoder;
+
+	@Override
+	@Transactional
+	public void encriptarClave(String idusuario) {
+		User user = userDao.buscarUsuario(idusuario);
+		user.setPassword(encoder.encode(user.getClave()));
+		userDao.save(user);
+	}
+	
+}

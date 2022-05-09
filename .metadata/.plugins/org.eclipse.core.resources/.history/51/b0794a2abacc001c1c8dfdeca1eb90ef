@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: servicio-atunera
+        uri: lb://servicio-atunera
+        predicates:          - Path=/api/atunera/**
+        filters:
+          - StripPrefix=2
+      - id: servicio-auth
+        uri: lb://servicio-auth
+        predicates:
+          - Path=/api/auth/**
+        filters:
+          - StripPrefix=2

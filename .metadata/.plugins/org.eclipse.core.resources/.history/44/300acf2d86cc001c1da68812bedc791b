@@ -1,0 +1,19 @@
+package com.nirsa.nw.web.app.servicioatunera.calidad.model.services;
+
+import java.util.List;
+
+import com.nirsa.nw.web.app.servicioatunera.calidad.model.entity.CalidadCatalogoEsterilizadoNovedad;
+
+public interface ICalidadCatalogoEsterilizadoNovedadService {
+	
+	public List<CalidadCatalogoEsterilizadoNovedad> listar();
+	
+	public CalidadCatalogoEsterilizadoNovedad findById(Integer id);
+	
+	public CalidadCatalogoEsterilizadoNovedad guardar(CalidadCatalogoEsterilizadoNovedad payload);
+	
+	public CalidadCatalogoEsterilizadoNovedad actualizar(Integer id,CalidadCatalogoEsterilizadoNovedad payload);
+	
+	public void eliminar(Integer id);
+	
+}

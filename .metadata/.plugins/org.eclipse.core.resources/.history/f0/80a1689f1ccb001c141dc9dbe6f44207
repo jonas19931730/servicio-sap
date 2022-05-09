@@ -1,0 +1,5 @@
+package com.nirsa.nw.web.app.servicioatunera.calidad.model.dao;
+
+public interface IEncartonadoDao {
+
+}

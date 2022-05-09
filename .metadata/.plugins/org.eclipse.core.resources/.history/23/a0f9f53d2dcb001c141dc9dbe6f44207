@@ -1,0 +1,9 @@
+package com.nirsa.nw.web.app.servicioatunera.model.services;
+
+public interface ILogTransaccionSapService {
+	public void registrarEnvioTransaccion();
+	
+	public void registrarTransaccionFinalizada();
+	
+	
+}

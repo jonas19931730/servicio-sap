@@ -1,0 +1,12 @@
+package com.nirsa.nw.web.app.auth.models.dao;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import com.nirsa.nw.web.app.auth.models.entity.User;
+
+public interface IUsuarioDao extends CrudRepository<User,Long> {
+
+	@Query("select u from User u where u.idusuario=?1 ")
+	public User findByUserName(Long username);
+}

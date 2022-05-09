@@ -1,0 +1,12 @@
+package com.nirsa.nw.web.app.model.services;
+
+import java.util.List;
+
+import com.nirsa.nw.web.app.model.entity.EncartonadoCajaLata;
+
+public interface IEncartonadoService {
+
+	public List<EncartonadoCajaLata> listar();
+	
+	public EncartonadoCajaLata findById(Integer id);
+}

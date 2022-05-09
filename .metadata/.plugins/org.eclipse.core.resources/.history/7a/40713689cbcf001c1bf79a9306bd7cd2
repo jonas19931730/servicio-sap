@@ -1,0 +1,55 @@
+package com.nirsa.nw.web.app.enlacemiddleware.services;
+
+import java.util.List;
+import java.util.Random;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.nirsa.nw.web.app.enlacemiddleware.models.dto.RequestSap;
+import com.nirsa.nw.web.app.enlacemiddleware.models.dto.ResponseSap;
+import com.nirsa.nw.web.app.enlacemiddleware.utils.ValoresConstantes;
+
+@Service
+public class SapServiceImpl implements ISapService {
+	
+	@Autowired
+	private RestTemplate clienteRest;
+
+	@Override
+	public void enviarProceso(RequestSap request) {
+			
+	}
+
+	@Override
+	public void enviarListaProcesos(List<RequestSap> listado) {
+		
+		
+	}
+	@Override
+	public List<ResponseSap> recibirProcesados() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public ResponseSap enviarProcesop(RequestSap request) {
+	
+		//Object obj = clienteRest.postForObject(ValoresConstantes.urlEnlace, request, Object.class);
+		
+		ResponseSap response = new ResponseSap();
+		Random random = new Random();
+		
+		Integer idsapGenerado = random.nextInt(100)*2;
+		response.setIdsap(idsapGenerado);
+		response.setData(request.getData());
+		return response;
+		
+	}
+	
+	
+}

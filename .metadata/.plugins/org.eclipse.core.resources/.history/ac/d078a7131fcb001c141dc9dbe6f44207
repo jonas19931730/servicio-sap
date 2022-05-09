@@ -1,0 +1,43 @@
+package com.nirsa.nw.web.app.servicioatunera.calidad.model.services.Impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.nirsa.nw.web.app.servicioatunera.calidad.model.dao.ICalidadCatalogoEsterilizadoNovedadDao;
+import com.nirsa.nw.web.app.servicioatunera.calidad.model.entity.CalidadCatalogoEsterilizadoNovedad;
+import com.nirsa.nw.web.app.servicioatunera.calidad.model.services.ICalidadCatalogoEsterilizadoNovedadService;
+
+public class CalidadCatalogoEsterelizadoNovedadServiceImpl implements ICalidadCatalogoEsterilizadoNovedadService  {
+
+	@Autowired
+	ICalidadCatalogoEsterilizadoNovedadDao catEstDao;
+	
+	@Override
+	public List<CalidadCatalogoEsterilizadoNovedad> listar() {
+		return (List<CalidadCatalogoEsterilizadoNovedad>) catEstDao.findAll();
+	}
+
+	@Override
+	public CalidadCatalogoEsterilizadoNovedad findById(Integer id) {
+		return catEstDao.findById(id).orElse(null);
+	}
+
+	@Override
+	public CalidadCatalogoEsterilizadoNovedad guardar(CalidadCatalogoEsterilizadoNovedad payload) {
+		return catEstDao.save(payload);
+	}
+
+	@Override
+	public CalidadCatalogoEsterilizadoNovedad actualizar(Integer id, CalidadCatalogoEsterilizadoNovedad payload) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void eliminar(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

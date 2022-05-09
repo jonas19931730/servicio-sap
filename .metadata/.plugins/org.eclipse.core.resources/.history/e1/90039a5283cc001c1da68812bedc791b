@@ -1,0 +1,14 @@
+package com.nirsa.nw.web.app.servicioatunera.clients;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+
+@FeignClient("servicio-sap")
+public interface IEnlaceClient {
+	
+	@PostMapping("/enviarSap")
+	public ResponseSap enviarSap(@RequestBody RequestSap request);
+}

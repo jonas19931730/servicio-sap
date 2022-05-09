@@ -1,0 +1,19 @@
+package com.nirsa.nw.web.app.auth.jwt;
+
+import java.util.logging.Logger;
+
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+
+public class JwtUtils {
+
+
+	@Value("${com.nirsa.nw.jwtSecret}")
+	private String jwtSecret;
+
+	@Value("${registro.propiedad.web.app.jwtExpirationMs}")
+	private int jwtExpirationMs;
+	
+	@Value("${registro.propiedad.web.app.cliente.jwtExpirationMs}")
+	private int jwtExpirationMsCliente;
+}

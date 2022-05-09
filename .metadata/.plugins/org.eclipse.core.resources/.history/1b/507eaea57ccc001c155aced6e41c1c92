@@ -1,0 +1,8 @@
+package com.nirsa.nw.web.app.enlacemiddleware.services;
+
+import com.nirsa.nw.web.app.enlacemiddleware.models.dto.ResponseSap;
+
+public interface ISapService {
+
+	public ResponseSap getRespuesta();
+}

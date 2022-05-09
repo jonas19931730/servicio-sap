@@ -1,0 +1,21 @@
+package com.nirsa.nw.web.app.auth.security.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.nirsa.nw.web.app.auth.models.dao.IUsuarioDao;
+import com.nirsa.nw.web.app.auth.models.entity.User;
+
+@Service
+public class UtilServiceImpl implements UtilService{
+	
+	@Autowired
+	IUsuarioDao userDao;
+
+	@Override
+	public void encriptarClave(String idusuario) {
+		Optinal<User> user = userDao.findByUserName(idusuario);
+		
+	}
+	
+}

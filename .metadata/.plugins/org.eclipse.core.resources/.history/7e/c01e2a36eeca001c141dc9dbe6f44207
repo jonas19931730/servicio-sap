@@ -1,0 +1,5 @@
+package com.nirsa.nw.web.app.model.services;
+
+public interface IEncartonadoService {
+
+}

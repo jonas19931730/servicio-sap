@@ -1,0 +1,4 @@
+spring.application.name=servicio-atunera
+server.port=8001
+
+

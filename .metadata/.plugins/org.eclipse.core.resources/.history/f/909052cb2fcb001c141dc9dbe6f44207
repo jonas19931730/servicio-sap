@@ -1,0 +1,44 @@
+package com.nirsa.nw.web.app.servicioatunera.model.services.Impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.nirsa.nw.web.app.servicioatunera.model.dao.ILogTransaccionSapDao;
+import com.nirsa.nw.web.app.servicioatunera.model.entity.LogTransaccionSap;
+import com.nirsa.nw.web.app.servicioatunera.model.services.ILogTransaccionSapService;
+
+public class LogTransaccionSapServiceImpl implements ILogTransaccionSapService{
+	
+	@Autowired
+	private ILogTransaccionSapDao logDao;
+
+	@Override
+	public List<LogTransaccionSap> listar() {
+		return (List<LogTransaccionSap>) logDao.findAll();
+	}
+
+	@Override
+	public List<LogTransaccionSap> listarEnviadas() {
+		return null;
+	}
+
+	@Override
+	public List<LogTransaccionSap> listarFinalizadas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void registrarEnvioTransaccion() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void registrarTransaccionFinalizada() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
